@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/slices/authSlice';
-import { FaShoppingCart, FaUser, FaSignOutAlt, FaSearch, FaStar } from 'react-icons/fa';
+import { FaShoppingCart, FaUser, FaSignOutAlt, FaSearch } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
@@ -28,8 +28,8 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${scrolled ? 'glass-strong shadow-xl' : 'glass'
-                } `}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass-strong shadow-xl' : 'glass'
+                }`}
         >
             <div className="container mx-auto">
                 <div className="flex justify-between items-center h-20 px-4">
@@ -46,7 +46,7 @@ const Navbar = () => {
                             />
                         </div>
                         <span className="text-2xl font-bold text-white">
-                            Gaurav<span className="text-cyan-400">Rai</span>
+                            Rai<span className="text-cyan-400">Store</span>
                         </span>
                     </Link>
 
@@ -54,10 +54,10 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             to="/"
-                            className={`relative text - sm font - medium transition - colors duration - 300 ${isActive('/')
-                                    ? 'text-cyan-400'
-                                    : 'text-gray-300 hover:text-white'
-                                } `}
+                            className={`relative text-sm font-medium transition-colors duration-300 ${isActive('/')
+                                ? 'text-cyan-400'
+                                : 'text-gray-300 hover:text-white'
+                                }`}
                         >
                             Home
                             {isActive('/') && (
@@ -66,10 +66,10 @@ const Navbar = () => {
                         </Link>
                         <Link
                             to="/products"
-                            className={`relative text - sm font - medium transition - colors duration - 300 ${isActive('/products')
-                                    ? 'text-cyan-400'
-                                    : 'text-gray-300 hover:text-white'
-                                } `}
+                            className={`relative text-sm font-medium transition-colors duration-300 ${isActive('/products')
+                                ? 'text-cyan-400'
+                                : 'text-gray-300 hover:text-white'
+                                }`}
                         >
                             Products
                             {isActive('/products') && (
@@ -78,10 +78,10 @@ const Navbar = () => {
                         </Link>
                         <Link
                             to="/categories"
-                            className={`relative text - sm font - medium transition - colors duration - 300 ${isActive('/categories')
-                                    ? 'text-cyan-400'
-                                    : 'text-gray-300 hover:text-white'
-                                } `}
+                            className={`relative text-sm font-medium transition-colors duration-300 ${isActive('/categories')
+                                ? 'text-cyan-400'
+                                : 'text-gray-300 hover:text-white'
+                                }`}
                         >
                             Categories
                             {isActive('/categories') && (
@@ -90,10 +90,10 @@ const Navbar = () => {
                         </Link>
                         <Link
                             to="/about"
-                            className={`relative text - sm font - medium transition - colors duration - 300 ${isActive('/about')
-                                    ? 'text-cyan-400'
-                                    : 'text-gray-300 hover:text-white'
-                                } `}
+                            className={`relative text-sm font-medium transition-colors duration-300 ${isActive('/about')
+                                ? 'text-cyan-400'
+                                : 'text-gray-300 hover:text-white'
+                                }`}
                         >
                             About
                             {isActive('/about') && (
@@ -104,10 +104,10 @@ const Navbar = () => {
                         {user && user.role === 'admin' && (
                             <Link
                                 to="/admin/dashboard"
-                                className={`relative text - sm font - medium transition - colors duration - 300 ${isActive('/admin/dashboard')
-                                        ? 'text-cyan-400'
-                                        : 'text-gray-300 hover:text-white'
-                                    } `}
+                                className={`relative text-sm font-medium transition-colors duration-300 ${isActive('/admin/dashboard')
+                                    ? 'text-cyan-400'
+                                    : 'text-gray-300 hover:text-white'
+                                    }`}
                             >
                                 Admin
                                 {isActive('/admin/dashboard') && (
@@ -170,4 +170,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

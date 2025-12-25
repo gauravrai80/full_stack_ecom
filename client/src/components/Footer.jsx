@@ -17,7 +17,7 @@ const Footer = () => {
                                 className="w-12 h-12 object-contain"
                             />
                             <span className="text-2xl font-bold text-white">
-                                Gaurav<span className="text-cyan-400">Rai</span>
+                                Rai<span className="text-cyan-400">Store</span>
                             </span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
