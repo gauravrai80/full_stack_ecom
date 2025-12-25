@@ -17,6 +17,8 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import OrderSuccess from './pages/OrderSuccess';
 import Orders from './pages/Orders';
+import Categories from './pages/Categories';
+import About from './pages/About';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -37,6 +39,8 @@ function App() {
                             <Route path="/register" element={<Register />} />
                             <Route path="/products" element={<Products />} />
                             <Route path="/products/:id" element={<ProductDetails />} />
+                            <Route path="/categories" element={<Categories />} />
+                            <Route path="/about" element={<About />} />
                             <Route path="/cart" element={<Cart />} />
 
                             {/* Protected Routes */}
